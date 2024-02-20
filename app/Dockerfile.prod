@@ -70,6 +70,7 @@ RUN chown -R app:app $APP_HOME
 # change to the app user
 USER app
 
+EXPOSE 1337
 # run entrypoint.prod.sh
 ENTRYPOINT ["/home/app/web/entrypoint.prod.sh"]
 CMD ["nginx", "-g", "daemon off;"]
