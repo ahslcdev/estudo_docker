@@ -28,6 +28,8 @@ services:
       - 1337:80
     depends_on:
       - web
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
 volumes:
   postgres_data:
