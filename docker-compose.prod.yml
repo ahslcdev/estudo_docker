@@ -14,8 +14,6 @@ services:
       - ./.env.prod
     depends_on:
       - db
-    networks:
-      - internal_network
   db:
     image: postgres:15
     volumes:
@@ -30,11 +28,6 @@ services:
       - 1337:80
     depends_on:
       - web
-    networks:
-      - internal_network
-
-networks:
-  internal_network:
 
 volumes:
   postgres_data:
